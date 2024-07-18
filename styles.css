@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 40px;
+}
+
+.logo {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+    list-style: none;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 17px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #243f58;
+    border-radius: 5px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked+label+ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 102px;
+    transition: 0.6s;
+    left: 10px;
+    right: 10px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+header {
+    text-align: center;
+    padding: 230px 20px 90px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1f1f1f;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #313131;
+}
+
+section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+    margin: 40px 70px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    margin: 0 0 20px;
+    font-size: 2em;
+    color: #1a1a1a;
+}
+
+section p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #666666;
+}
+
+@media screen and (max-width: 880px) {
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 8px 13px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+
+
+@media screen and (max-width: 740px) {
+    .logo {
+        font-size: 1.3em;
+        padding: 3px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .hamburger-menu span {
+        height: 3px;
+        width: 18px;
+        margin: 2px 0;
+    }
+
+    #menu-toggle:checked+label .span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    #menu-toggle:checked+label .span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+label .span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 0.9em;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    section h2 {
+        font-size: 1.7em;
+    }
+
+    section p {
+        font-size: 0.9em;
+    }
+}
